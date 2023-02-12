@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
+import { useStore } from 'zustand';
 import './Login.css'
 import Succes from './Succes';
+// import Error from './Error'
 
-const Login = ({users}) => {
+const Login = () => {
+  const {users} = useStore();
+
   const [isLogged, setIsLogged] = useState(false)
   const [user, setUser] = useState({
     email: null,
@@ -18,7 +22,6 @@ const Login = ({users}) => {
     })
 
   }
-  console.log(user.email)
 
   const handleChangeInputPass = (e) => {
 
@@ -29,7 +32,6 @@ const Login = ({users}) => {
     })
 
   }
-  console.log(user.pass)
 
   // //Ingreso 
   // //user: george.edwards@reqres.in
@@ -43,17 +45,16 @@ const Login = ({users}) => {
 
   }
 
-  return (     
-
+  return (
+  
       isLogged ? <Succes /> :
-
 
       <form action="" className='form-gruop mt-5 mb-3' onSubmit={validarDatos}>
         <input type="text" placeholder='Usuario' className='form-control mb-3' onChange={handleChangeInputEmail} />
         <input type="password" placeholder='Ingrese su clave' className='form-control mb-3' onChange={handleChangeInputPass} />
         <input type="submit" value="Iniciar sesion" className='btn btn-primary mb-5' />
       </form>
-  
+    
   )
 }
 
