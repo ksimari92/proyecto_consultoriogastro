@@ -1,3 +1,38 @@
+/*HEADER*/
+
+.header {
+    background-color: #375b79 !important;
+    color: #fff;
+    height: 7em;
+}
+
+.header a {
+    color: #fff;
+}
+
+.logo {
+    width: 50px;
+    margin-left: 40%;
+    margin-bottom: 10px;
+}
+
+
+/*NOSOTROS*/
+
+.nosotros {
+    margin-top: 2%;
+}
+
+.nosotros>h2 {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.nosotros>p {
+    text-align: justify;
+}
+
+
 /*GALERIA*/
 
 .galeria {
@@ -7,4 +42,22 @@
 
 img {
     width: 30%;
+}
+
+
+/*CONTACTO*/
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario {
+    width: 50%;
+}
+
+.formulario>.btn {
+    width: 20%;
 }

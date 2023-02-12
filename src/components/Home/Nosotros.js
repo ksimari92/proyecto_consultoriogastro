@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nosotros = () => {
   return (
-    <div className='container'>
+    <div className='container nosotros'>
       <h2>¿Quienes sómos?</h2>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum libero quam molestiae maiores animi repellat quas voluptate deleniti? Reprehenderit, consequuntur quaerat. Aspernatur consectetur veniam velit tempora accusantium repudiandae provident unde!
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta architecto minima porro a ex id illo enim nobis omnis consequuntur eius quas cumque, doloribus illum vero eveniet odit ipsa numquam.
