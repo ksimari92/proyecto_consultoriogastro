@@ -5,28 +5,24 @@ import Galeria from './Galeria'
 import Contacto from './Contacto'
 import Nosotros from './Nosotros'
 import Login from '../Login/Login'
+import { useAuth } from '../../store'
 
-const Home = ( {users}) => {
+const Home = ( ) => {
   const [isTrue, setIsTrue] = useState(false);
-  console.log(users)
-
-  const handleClickEventLog =() => {
-    if (!isTrue) {
-      setIsTrue(true)
-    } 
-  }
 
   const handleClickEventHome =() => {
     if (isTrue) {
       setIsTrue(false)
-    } 
+    } else  if (!isTrue) {
+      setIsTrue(true)
   }   
+}
 
   return (
     <div>
-      <Header handleClickEventLog={handleClickEventLog} handleClickEventHome={handleClickEventHome}/>
+      <Header  handleClickEventHome={handleClickEventHome}/>
 
-      {isTrue ? <Login users={users}/> : 
+      {isTrue ? <Login /> : 
        <> 
         <Nosotros/>
         <Galeria/>
@@ -37,4 +33,4 @@ const Home = ( {users}) => {
   )
 }
 
-export default Home
+export default Home;
