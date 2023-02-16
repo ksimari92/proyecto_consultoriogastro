@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React,  { useState } from 'react'
 import './Home.css'
 import Header from './Header'
 import Galeria from './Galeria'
@@ -7,28 +7,28 @@ import Nosotros from './Nosotros'
 import Login from '../Login/Login'
 import { useAuth } from '../../store'
 
-const Home = ( ) => {
+const Home = () => {
   const [isTrue, setIsTrue] = useState(false);
 
-  const handleClickEventHome =() => {
+  const handleClickEventHome = () => {
     if (isTrue) {
       setIsTrue(false)
-    } else  if (!isTrue) {
+    } else if (!isTrue) {
       setIsTrue(true)
-  }   
-}
+    }
+  }
 
   return (
     <div>
-      <Header  handleClickEventHome={handleClickEventHome}/>
+      <Header handleClickEventHome={handleClickEventHome} />
 
-      {isTrue ? <Login /> : 
-       <> 
-        <Nosotros/>
-        <Galeria/>
-        <Contacto/>
+      
+        <>
+          <Nosotros />
+          <Galeria />
+          <Contacto />
         </>
-  }
+      
     </div>
   )
 }

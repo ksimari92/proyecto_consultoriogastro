@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import { useStore } from 'zustand';
+import { useAuth } from '../../store';
 import './Login.css'
 import Succes from './Succes';
 // import Error from './Error'
 
 const Login = () => {
-  const {users} = useStore();
+  // const {users} = useStore();
+  const users = [{email:"user@mail", id: 22}]
+   console.log(users)
 
-  const [isLogged, setIsLogged] = useState(false)
+  // const [isLogged, setIsLogged] = useAuth();
+  const [isLogged, setIsLogged] = useState(false);
   const [user, setUser] = useState({
     email: null,
     pass: null
@@ -48,12 +52,14 @@ const Login = () => {
   return (
   
       isLogged ? <Succes /> :
-
+      <>
+       <h1>Bienvenido</h1>
       <form action="" className='form-gruop mt-5 mb-3' onSubmit={validarDatos}>
         <input type="text" placeholder='Usuario' className='form-control mb-3' onChange={handleChangeInputEmail} />
         <input type="password" placeholder='Ingrese su clave' className='form-control mb-3' onChange={handleChangeInputPass} />
         <input type="submit" value="Iniciar sesion" className='btn btn-primary mb-5' />
       </form>
+      </>
     
   )
 }

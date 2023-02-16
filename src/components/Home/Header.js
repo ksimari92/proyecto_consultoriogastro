@@ -9,6 +9,7 @@ import Login from '../Login/Login';
 const Header = ({ handleClickEventHome }) => {
 
     const { isLogged, setIsLogged } = useAuth();
+    console.log(isLogged)
 
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary header">
@@ -33,7 +34,7 @@ const Header = ({ handleClickEventHome }) => {
                                 <Link to='/' onClick={() => setIsLogged(false)} className='btn btn-primary'>Cerrar sesion </Link>
                                 </>
                                 :
-                                <Link to='/' onClick={() => setIsLogged(true)} className='btn btn-primary'>Iniciar sesión</Link>
+                                <Link to='/login' onClick={() => setIsLogged(true)} className='btn btn-primary'>Iniciar sesión</Link>
                             }
                             </div>
                     </div>
