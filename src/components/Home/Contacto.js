@@ -3,7 +3,7 @@ import React from 'react'
 const Contacto = () => {
   return (
     <div className='container-fluid container-form mt-5 '>
-        <h3 className='mb-3'>¡Contactanos!</h3>
+        <h2 className='subtitulo-home mb-3'>¡Contactanos!</h2>
         <form className='form-group row formulario' action="">
             <input type="text" className='form-control  mb-3' placeholder='Nombre y Apellido' />
             <input type="email" className='form-control mb-3' placeholder='Correo' />

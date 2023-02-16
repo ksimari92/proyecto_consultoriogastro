@@ -24,7 +24,7 @@ const Home = () => {
 
       
         <>
-          <Nosotros />
+          <Nosotros/>
           <Galeria />
           <Contacto />
         </>
