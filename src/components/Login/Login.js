@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import { useStore } from 'zustand';
+import { useStore } from '../../store';
 import { useAuth } from '../../store';
 import './Login.css'
 import Succes from './Succes';
 // import Error from './Error'
 
 const Login = () => {
-  // const {users} = useStore();
-  const users = [{email:"user@mail", id: 22}]
+  const {users} = useStore();
+  // const users = [{email:"user@mail", id: 22}]
    console.log(users)
 
-  // const [isLogged, setIsLogged] = useAuth();
-  const [isLogged, setIsLogged] = useState(false);
+  const {isLogged, setIsLogged} = useAuth();
+  // const [isLogged, setIsLogged] = useState(false);
   const [user, setUser] = useState({
     email: null,
     pass: null

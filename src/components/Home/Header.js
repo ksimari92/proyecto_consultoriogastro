@@ -34,7 +34,7 @@ const Header = ({ handleClickEventHome }) => {
                                 <Link to='/' onClick={() => setIsLogged(false)} className='btn btn-primary'>Cerrar sesion </Link>
                                 </>
                                 :
-                                <Link to='/login' onClick={() => setIsLogged(true)} className='btn btn-primary'>Iniciar sesión</Link>
+                                <Link to='/login'  className='btn btn-primary'>Iniciar sesión</Link>
                             }
                             </div>
                     </div>

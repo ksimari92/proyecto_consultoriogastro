@@ -31,7 +31,7 @@ const { setUsers,users } = useStore()
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<Home users={users}/>} />
           <Route path='/login' element={<Login />} />
           <Route path='/pacientes' element={<Pacientes/>}/>
 
