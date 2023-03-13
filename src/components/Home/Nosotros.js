@@ -10,8 +10,8 @@ const Nosotros = () => {
       <h2 className='subtitulo-home'>¿Quienes sómos?</h2>
       <div className="doctor-container">
         {users.map(
-          user => {
-            return <Medico  user={user}/>
+          (user,index) => {
+            return <Medico key={index} user={user}/>
           }
         )
         }

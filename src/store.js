@@ -25,3 +25,15 @@ export const useAuth = create()(
         {name: 'logged-status'}
     )
 ) 
+
+export const usePacients = create()(
+    persist(
+        (set)=>({
+            pacients: [],
+            setPacients: (data)=>{
+                set({pacients: data})
+            }
+        }),
+        {name: 'pacients-storage'}
+    )
+) 

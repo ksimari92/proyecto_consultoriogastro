@@ -4,9 +4,9 @@ const Medico = ({ user }) => {
 
     return (
         <div className='doctor-card' >
-            <img src={user.avatar} alt="Doctor" />
-            <h4>{user.first_name} {user.last_name}</h4>
-            <p>{user.email}</p>
+            <img src={user.avatar} className='rounded' alt="Doctor" />
+            <h5>{user.first_name} {user.last_name}</h5>
+            <p className='fuente-email'>{user.email}</p>
         </div>
 
     )

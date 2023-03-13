@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { store, useStore } from './store.js'
+import { store, usePacients, useStore } from './store.js'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home'
 import Login from './components/Login/Login.js';
@@ -7,7 +7,8 @@ import Pacientes from './components/Pacientes/Pacientes.js';
 // import Login from './components/Login/Login';
 
 function App() {
-const { setUsers,users } = useStore()
+const { setUsers,users } = useStore();
+const {setPacients, pacients} = usePacients();
 
   const getUsers = async (url) => {
     await fetch(url)
@@ -20,12 +21,24 @@ const { setUsers,users } = useStore()
       });
   };
 
+  const getPacients = async (url) => {
+    await fetch(url)
+      .then((response) =>
+        response.json()
+      )
+      .then((data) => {
+        setPacients(data)
+      });
+  };
+
   useEffect(()=>{
     console.log(users)
-  },[users])
+    console.log(pacients)
+  },[users,pacients])
 
   useEffect(() => {
     getUsers('https://reqres.in/api/users?page=1%27');
+    getPacients('https://jsonplaceholder.typicode.com/users');
   }, []);
   return (
     <div>
